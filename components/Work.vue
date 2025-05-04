@@ -51,7 +51,7 @@ const companies = [
 <template>
   <section id="work" class="pt-12 pb-20 md:pb-28">
     <div
-      class="container bg-[#F5F5F5] mx-auto px-4 py-10 rounded-3xl text-center border-dashed border-2 border-slate-300 mx-auto max-w-screen-xl"
+      class="container bg-[#F5F5F5] mx-auto px-4 py-10 rounded-3xl text-center border-dashed border-2 border-slate-300 mx-auto max-w-(--breakpoint-xl)"
     >
       <h1
         class="text-xl md:text-2xl lg:text-3xl max-w-xl mx-auto font-bold mb-6 animate-slide-up"

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { NuxtLink } from "#components";
-const logos = ["matchem", "ca", "backmarket", "fifteen", "askup"];
+const logos = [];
 
 defineProps<{
   logo: string;

@@ -1,44 +1,20 @@
 <script setup lang="ts">
-import { motion } from "motion-v";
 useHead({
   title: "Evan SENDE",
 });
 </script>
 
 <template>
-  <div class="bg-[#FCFCFC]">
-    <motion.div
-      :initial="{ opacity: 0, scale: 0.8 }"
-      :while-in-view="{ opacity: 1, scale: 1 }"
-      :in-view-options="{ once: true }"
-      :transition="{ duration: 0.5 }"
-    >
-      <Hero></Hero
-    ></motion.div>
-    <motion.div
-      :initial="{ opacity: 0, scale: 0.8 }"
-      :while-in-view="{ opacity: 1, scale: 1 }"
-      :in-view-options="{ once: true }"
-      :transition="{ duration: 0.5 }"
-    >
-      <VideoSection></VideoSection
-    ></motion.div>
-    <motion.div
-      :initial="{ opacity: 0, scale: 0.8 }"
-      :while-in-view="{ opacity: 1, scale: 1 }"
-      :in-view-options="{ once: true }"
-      :transition="{ duration: 0.5 }"
-    >
-      <Work></Work
-    ></motion.div>
-    <motion.div
-      :initial="{ opacity: 0, scale: 0.8 }"
-      :while-in-view="{ opacity: 1, scale: 1 }"
-      :in-view-options="{ once: true }"
-      :transition="{ duration: 0.5 }"
-    >
-      <Call></Call><Footer></Footer>
-    </motion.div>
+  <div class="pt-0 sm:pt-16 lg:pt-32">
+    <Nav></Nav>
+    <Hero></Hero>
+    <VideoSection></VideoSection>
+    <!-- Background -->
+    <div
+      class="absolute fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
+    ></div>
+    <!-- Background -->
+    <!-- <WorkPrenium></WorkPrenium> -->
   </div>
 </template>
 

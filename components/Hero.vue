@@ -1,71 +1,103 @@
 <script setup lang="ts">
 import { NuxtLink } from "#components";
-const logos = ["matchem", "ca", "backmarket", "fifteen", "askup"];
+import { motion } from "motion-v";
+
+const logos = ["paris_turf", "credit_agricole", "back_market", "fifteen"];
+const headerTitle = "Frontend & Design selon vos enjeux.";
+const headerText =
+  "Développeur front-end avec un fort intérêt pour le design, j'interviens sur des projets variés, de startup à grand groupe.";
 </script>
 
 <template>
-  <section class="pt-12 pb-20 md:pb-28">
-    <div
-      class="container bg-white mx-auto px-4 py-10 rounded-3xl text-center border-dashed border-2 border-slate-300 mx-auto max-w-screen-xl"
+  <section class="pt-20 px-4 text-white flex flex-col items-center">
+    <AnimatedText
+      class="flex items-center gap-x-1"
+      :animationDelay="0.5"
+      type="blur"
     >
-      <h1
-        class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up"
+      <img
+        src="/img/logo_white_laurel_crown.png"
+        class="w-6 rotate-x-30 rotate-15"
+      />
+      <NuxtLink
+        to="https://www.malt.fr/profile/evansende"
+        target="_blank"
+        class="font-semibold px-4 py-1 bg-slate-800 rounded-full flex items-center h-fit gap-x-3"
       >
-        Développeur expert pour<br />
-        des interfaces performantes<br />
-        et évolutives
-      </h1>
-      <p
-        class="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-gray-600 animate-slide-up"
-        style="animation-delay: 100ms"
+        Super Malter
+        <div class="flex gap-x-2">
+          <img v-for="_ in 3" src="/img/super_malter.svg" class="w-3" />
+        </div>
+      </NuxtLink>
+      <img
+        src="/img/logo_white_laurel_crown.png"
+        class="w-6 rotate-y-180 rotate-x-30 -rotate-15"
+      />
+    </AnimatedText>
+    <h1
+      class="flex flex-wrap justify-center gap-x-1 sm:gap-x-2 text-3xl sm:text-5xl lg:text-7xl font-medium text-blue-100 max-w-lg lg:max-w-xl mt-8"
+    >
+      <AnimatedText
+        v-for="(word, wordIndex) in headerTitle.split(' ')"
+        :animationDelay="wordIndex * 0.1"
+        type="blur"
       >
-        Avec plus de 4 ans d’expérience auprès de startups et grands groupes, je
-        conçois et développe des interfaces graphiques sur mesure, alliant
-        performance, scalabilité et expérience utilisateur optimale.
-      </p>
-      <div
-        class="flex flex-col sm:flex-row justify-center gap-12 animate-slide-up"
-        style="animation-delay: 200ms"
+        {{ word }}
+      </AnimatedText>
+    </h1>
+    <h3
+      class="mt-4 sm:mt-8 flex flex-wrap justify-center gap-x-1 text-sm sm:text-xl max-w-md sm:max-w-xl text-slate-400"
+    >
+      <AnimatedText
+        v-for="(word, wordIndex) in headerText.split(' ')"
+        :animationDelay="0.3 + wordIndex * 0.05"
+        type="blur"
       >
+        {{ word }}
+      </AnimatedText>
+    </h3>
+
+    <div
+      class="flex flex-col items-center sm:flex-row gap-2 mt-8"
+      :animationDelay="1"
+      type="blur"
+    >
+      <AnimatedText :animationDelay="1" type="blur">
         <NuxtLink
-          to="https://cal.com/evansende/qualification-freelance?overlayCalendar=true"
+          to="https://cal.com/evansende/qualification-freelance?overlayCalendar=true&duration=15"
           target="_blank"
-          class="rounded-full bg-black text-white btn-primary py-4 px-6 uppercase"
+          class="uppercase px-5 py-3 bg-slate-200 text-sm rounded-full flex items-center h-fit text-black"
         >
           prendre un rendez-vous
-        </NuxtLink>
-        <NuxtLink
-          to="#work"
-          class="rounded-full border-solid border-2 border-slate-200 btn-primary py-4 px-6 uppercase"
-        >
-          mes expériences
-        </NuxtLink>
-      </div>
-      <div
-        class="mx-auto mt-16 max-w-2xl text-start bg-[#F0F0F0] p-4 rounded-xl flex flex-col gap-4"
+        </NuxtLink></AnimatedText
       >
-        <div>
-          J'ai eu le plaisir de travailler avec Evan sur la partie front de
-          ParisTurf, je le recommande les yeux fermés. Il est techniquement
-          solide, fiable et ultra investi, c'est exactement le genre de
-          développeur "A-player" qu'on veut avoir dans son équipe. Au plaisir de
-          remettre ça sur une prochaine mission !
-        </div>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 bg-[#D9D9D9] rounded-full"></div>
-          <span>Alexandre S.</span>
-        </div>
-      </div>
-      <p class="mt-16">
-        Ils m’ont fait confiance pour passer à la vitesse supérieur.
-      </p>
-      <div class="flex flex-col xl:flex-row gap-12 mx-auto w-fit mt-8">
-        <img
-          v-for="logo in logos"
-          :src="`/img/header_logos/${logo}.svg`"
-          :alt="logo"
-          height="40"
-        />
+      <AnimatedText :animationDelay="1.1" type="blur">
+        <NuxtLink
+          to="https://www.linkedin.com/in/evan-sende"
+          target="_blank"
+          class="uppercase px-5 py-3 bg-slate-800 text-sm rounded-full flex items-center h-fit w-fit"
+          >mon parcours</NuxtLink
+        ></AnimatedText
+      >
+    </div>
+    <div class="mt-12 flex flex-col items-center gap-y-4 text-blue-100">
+      <AnimatedText :animationDelay="1.2" type="blur">
+        <p>Ils m’ont fait confiance:</p>
+      </AnimatedText>
+      <div
+        class="flex flex-col lg:flex-row gap-12 mx-auto w-fit justify-center items-center"
+      >
+        <AnimatedText
+          v-for="(logo, logoIndex) in logos"
+          :animationDelay="1.3 + logoIndex * 0.05"
+          type="blur"
+        >
+          <img
+            :src="`/img/header_logos/${logo}.svg`"
+            :alt="logo"
+            class="w-40"
+          />
+        </AnimatedText>
       </div>
     </div>
   </section>

@@ -3,7 +3,7 @@
 <template>
   <section class="pt-12 pb-20 md:pb-28">
     <div
-      class="container bg-[#0D0D0D] mx-auto px-4 py-10 rounded-3xl text-center border-dashed border-2 border-slate-300 mx-auto max-w-screen-xl"
+      class="container bg-[#0D0D0D] mx-auto px-4 py-10 rounded-3xl text-center border-dashed border-2 border-slate-300 mx-auto max-w-(--breakpoint-xl)"
     >
       <h1
         class="uppercase text-xl md:text-2xl lg:text-3xl max-w-xl mx-auto font-bold mb-6 text-white animate-slide-up"
