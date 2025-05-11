@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { Analytics } from "@vercel/analytics/nuxt";
-
 useHead({
   title: "Evan SENDE",
 });
 </script>
 
 <template>
-  <Analytics />
   <div class="pt-0 sm:pt-16 lg:pt-32">
     <Nav></Nav>
     <Hero></Hero>
