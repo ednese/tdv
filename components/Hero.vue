@@ -26,7 +26,7 @@ const headerText =
       >
         Super Malter
         <div class="flex gap-x-2">
-          <img v-for="_ in 2" src="/img/super_malter.svg" class="w-3" />
+          <img v-for="_ in 3" src="/img/super_malter.svg" class="w-3" />
         </div>
       </NuxtLink>
       <img
